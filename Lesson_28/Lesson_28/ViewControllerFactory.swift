@@ -19,4 +19,10 @@ final class ViewControllerFactory {
         return controller
     }
     
+    static func makeStartViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
+        return controller
+    }
+    
 }
